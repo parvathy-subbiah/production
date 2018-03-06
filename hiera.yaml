@@ -1,0 +1,26 @@
+:backends:
+  - yaml
+  #- eyaml
+
+:logger: console
+
+:hierarchy:
+  - client/%{::client}/node/%{::fqdn}
+  - client/%{::client}/location/%{::location}/%{::puppet_role}
+  - client/%{::client}/location/%{::location}/%{module_name}
+  - client/%{::client}/location/%{::location}
+  - os/%{::operatingsystem}
+  - role/%{::puppet_role}
+  - module/%{module_name}
+  - common
+  - user1
+
+:yaml:
+  :datadir: /etc/puppetlabs/code/environments/production/hieradata
+
+:eyaml:
+  :datadir: /etc/puppetlabs/code/environments/production/hieradata
+  :pkcs7_private_key: /etc/puppetlabs/code/keys/private_key.pkcs7.pem
+  :pkcs7_public_key: /etc/puppetlabs/code/keys/public_key.pkcs7.pem
+
+:merge_behavior: deeper
