@@ -1,0 +1,46 @@
+Create puppet module for Java installation												Durations
+	a.       Create user java
+	b.      Create group java	
+	c.       Create the home path for java as /home/java	
+	d.      Export JAVA_HOME in the java user profile	
+	e.       Install java	
+	f.        Assign the ownership for installed java directory as java:java	
+	g.       Set the MOD as 0755 for /usr/java/{jdk-installed version}             	
+Create puppet module for java installation (with Roles and Profiles)	
+																	2 days
+	a. Get the java version from hiera file	
+	b.install java and assign the ownership installed directory to appuser	
+	c.create appuser and assign to java group	
+	"d.download the java binary from nexus and keep it in /tmp folder(binary location:<dependency>
+  <groupId>Linux</groupId>
+  <artifactId>jdk</artifactId>
+  <version>8u131</version>
+  <classifier>x64</classifier>
+  <type>rpm</type>
+</dependency>)"	
+Create Puppet module for jboss	
+a)create role and profile as "trainning_app_server" and call the java class 								2 days
+	download and install jboss 6.4	
+	download the war  	
+	install the jboss in /web folder	
+	place the war file under /web/jboss6.4/standalone/deployments	
+	create the user jboss and assign the ownership to /web folder	
+	jboss user profile export JAVA_HOME,JBOSS_HOME	
+Roles and profile 	
+create role,pprofile,hiera as "trainning_jboss_server " and call the java and jboss class						1 day
+		
+Create Puppet module for jboss with branches	Create a jboss repository in GOGS							4 days
+	Create two branches named feature/jboss6.4,feature/jboss7.0	
+	Jboss 6.4 branch have to install jboss 6.4 and download the war file and put into the deployment folder	
+	jboss 7.0 branch have to install jboss 7.0 and deploy some sample applications	
+	commit the both branches in gogs	
+create role	create a two roles as "production_jboss_server,dev_jboss_server.							1 day
+	production_jboss_server role need to call the java1.8,jboss7.0	
+	dev_jboss_server need to call the jboss 6.4 and java 1.7	
+		
+download the puppet modules thorugh r10k
+	install r10k into the servers													1day
+	write a puppetfile to download the java,archieve,jboss,roles,profiles	
+	Apply the production_jboss_server for the server	
+		
+
