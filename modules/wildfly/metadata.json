@@ -1,0 +1,92 @@
+{
+  "name": "biemond-wildfly",
+  "version": "2.2.0",
+  "author": "Edwin Biemond",
+  "summary": "Install, configure and manage Wildfly (8/9/10), JBoss EAP (6.1+/7.0+) and some Wildfly based products like apiman, Keycloak and Infinispan.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/biemond/biemond-wildfly",
+  "project_page": "https://github.com/biemond/biemond-wildfly",
+  "issues_url": "https://github.com/biemond/biemond-wildfly/issues",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">=4.13.1 < 5.0.0"},
+    {"name":"jethrocarr/initfact","version_requirement":">=1.0.1 < 2.0.0"}
+  ],
+  "data_provider": null,
+  "tags": [
+    "jboss",
+    "wildfly",
+    "keycloak",
+    "apiman",
+    "infinispan",
+    "EAP",
+    "AS",
+    "jdk8",
+    "java",
+    "jdk7"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11 SP1"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=4.4.2 < 5.0.0"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
 :logger: console
 
 :hierarchy:
-  - user1
+  - role/%{::puppet_role}
 
 :yaml:
   :datadir: /etc/puppetlabs/code/environment/production/hieradata
